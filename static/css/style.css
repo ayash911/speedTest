@@ -1,0 +1,121 @@
+
+body {
+    font-family: "Roboto", Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .button {
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    background: linear-gradient(to right, #1db954, #119d47);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .button:hover:enabled {
+    background: linear-gradient(to right, #17a847, #0f8c3e);
+    transform: scale(1.05);
+  }
+
+  .button:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+
+  #results {
+    margin-top: 30px;
+    font-size: 1rem;
+    width: 90%;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease;
+  }
+
+  .spinner {
+    margin: 50px auto;
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255, 255, 255, 0.2);
+    border-top: 6px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  .error {
+    color: #ff4c4c;
+    font-weight: bold;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+  }
+
+  footer span {
+    color: #1db954;
+    font-weight: bold;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    .button {
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+
+    #results {
+      font-size: 0.9rem;
+    }
+  }
